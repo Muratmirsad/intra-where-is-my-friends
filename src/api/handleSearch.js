@@ -6,7 +6,7 @@ export const handleSearch = (searchQuery, setSearchResults) => {
 		maxBodyLength: Infinity,
 		url: `https://api.intra.42.fr/v2/users/${searchQuery.toLowerCase()}`,
 		headers: {
-			'Authorization': 'Bearer ada568d502e868a02d684f4f0a6fc60b8069da6288bbef8db9d9f9b00dff783a',
+			'Authorization': 'Bearer 59b1f24312d914ea7df0fa75bc097cbc05c1063b04753a9d65d94ac97d746afc',
 			'Cookie': '_intra_42_session_production=64faa32f79df99f4d4222d0f74f0bda4'
 		}
 	})
