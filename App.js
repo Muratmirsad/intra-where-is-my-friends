@@ -1,57 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { View, SafeAreaView, Text, ScrollView } from 'react-native';
-import SearchUser from './src/components/SearchUser';
-import Logo from './src/components/Logo';
-import Home from './src/components/Home';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// This is the entry point if you run `yarn expo:start`
+// If you run `yarn ios` or `yarn android`, it'll use ./index.js instead.
+import App from "./app/app.tsx"
+import React from "react"
+import { registerRootComponent } from "expo"
+import * as SplashScreen from "expo-splash-screen"
 
+SplashScreen.preventAutoHideAsync()
 
-function HomeScreen() {
-	return (
-		<ScrollView>
-			<SafeAreaView />
-			<Logo />
-			<Home />
-		</ScrollView>
-	);
+function IgniteApp() {
+  return <App hideSplashScreen={SplashScreen.hideAsync} />
 }
 
-function SearchScreen() {
-	return (
-		<View>
-		<SafeAreaView />
-		<Logo />
-		<SearchUser />
-		<StatusBar style="auto" />
-		</View>
-	);
-}
-  
-  function SettingsScreen() {
-	return (
-		<ScrollView>
-			<Text>Emeği Geçenler: hbaygul, mdiraga</Text>
-		</ScrollView>
-	);
-  }
-  
-  const Tab = createBottomTabNavigator();
-  
-  function MyTabs() {
-	return (
-		<Tab.Navigator screenOptions={{headerShown: false}}>
-			<Tab.Screen name="Home" component={HomeScreen} />
-			<Tab.Screen name="Search" component={SearchScreen} />
-			<Tab.Screen name="Settings" component={SettingsScreen} />
-		</Tab.Navigator>
-	);
-  }
-
-export default function App() {
-	return (
-		<NavigationContainer>
-    		<MyTabs />
-    	</NavigationContainer>
-	);
-}
+registerRootComponent(IgniteApp)
+export default IgniteApp
