@@ -53,7 +53,8 @@ ignite-project
 │       ├── navigator
 │       └── screen
 ├── index.js
-├── ios
+├── ios![Untitled-2023-02-17-1853](https://user-images.githubusercontent.com/57044743/225398148-55cb20ab-a955-44be-917b-7443e8575b22.png)
+
 │   ├── IgniteProject
 │   ├── IgniteProject-tvOS
 │   ├── IgniteProject-tvOSTests
@@ -121,6 +122,10 @@ This directory will hold your Jest configs and mocks.
 ## Running Detox end-to-end tests
 
 Read [Detox setup instructions](./detox/README.md).
+
+## What's next?
+
+![Untitled-2023-02-17-1853](https://user-images.githubusercontent.com/57044743/225398396-c1d371ea-c193-4ca6-9631-222153a01345.png)
 
 ## Previous Boilerplates
 
