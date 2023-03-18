@@ -47,7 +47,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
   }
 
   return (
-    <Screen style={$container} preset="scroll" safeAreaEdges={["top", "bottom"]}>
+    <Screen style={$container} safeAreaEdges={["top", "bottom"]}>
       <View style={$topContainer}>
         <Image style={$welcomeLogo} source={welcomeLogo} resizeMode="contain" />
         <Text tx="welcomeScreen.headerSublabel" preset="subheading" />
